@@ -7,6 +7,6 @@ export default defineConfig({
   base: "/portfolio-website/",
   server: {
     open: true,
-    port: 2094
+    port: 2904
   }
 })
