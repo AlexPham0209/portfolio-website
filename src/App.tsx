@@ -1,17 +1,15 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import NavButton from './components/Navbutton'
-import NavBar from './components/Navbar'
+import NavButton from './components/NavButton'
+import NavBar from './components/NavBar'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 
-function Page() {
-  let Component
-} 
+
 
 function App() {
   const [count, setCount] = useState(0)
