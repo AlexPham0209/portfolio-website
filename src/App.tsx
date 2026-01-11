@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
+import { AnimatePresence } from 'motion/react'
 
 
 
@@ -18,12 +19,16 @@ function App() {
         <NavButton link='/projects'>Projects</NavButton>
       </NavBar>
       
-      <Routes>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/skills' element={<Skills/>}/>
-        <Route path='/projects' element={<Projects/>}/>
-      </Routes>
+      <AnimatePresence mode='wait'>
+        <div className='mt-30'>
+          <Routes>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/skills' element={<Skills/>}/>
+            <Route path='/projects' element={<Projects/>}/>
+          </Routes>
+        </div>
+      </AnimatePresence>
       
     </HashRouter>
   )
