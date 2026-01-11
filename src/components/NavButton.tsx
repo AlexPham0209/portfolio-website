@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function NavButton({children, link}: {children?: React.ReactNode, link: string}) {
     return (
         <li className="p-2.5 text-center">
-            <a href={link}>
+            <Link to={link}>
                 {children != null && children}
-            </a>
+            </Link>
         </li>
     );
 }
