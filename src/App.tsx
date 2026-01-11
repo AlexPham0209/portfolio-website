@@ -1,6 +1,6 @@
 import NavButton from './components/NavButton'
 import NavBar from './components/NavBar'
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Skills from './pages/Skills'
