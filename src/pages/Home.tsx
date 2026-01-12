@@ -46,7 +46,7 @@ export default function Home() {
                         </motion.div>
                     </div>
 
-                    <motion.img className="size-1/4 rounded-xl" src="public/face.jpg" variants={item}></motion.img>
+                    <motion.img className="size-1/4 rounded-xl" src="./public/face.jpg" variants={item}></motion.img>
                 </div>
 
                 
