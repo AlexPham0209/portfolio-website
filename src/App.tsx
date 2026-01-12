@@ -2,7 +2,7 @@ import NavButton from './components/NavButton'
 import NavBar from './components/NavBar'
 import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
+// import About from './pages/About'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import { AnimatePresence } from 'motion/react'
@@ -14,7 +14,7 @@ function Pages() {
         <Routes location={location} key={location.pathname}>
           <Route path='*' element={<Navigate to="/home"/>}/>
           <Route path='/home' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
+          {/* <Route path='/about' element={<About/>}/> */}
           <Route path='/skills' element={<Skills/>}/>
           <Route path='/projects' element={<Projects/>}/>
         </Routes>
@@ -26,7 +26,7 @@ function App() {
     <HashRouter>
       <NavBar>
         <NavButton link='/home'>Home</NavButton>
-        <NavButton link='/about'>About</NavButton>
+        {/* <NavButton link='/about'>About</NavButton> */}
         <NavButton link='/skills'>Skills</NavButton>
         <NavButton link='/projects'>Projects</NavButton>
       </NavBar>
