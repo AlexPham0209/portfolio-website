@@ -29,7 +29,7 @@ export default function Home() {
                 >
                 <div className="flex flex-row items-center justify-evenly" >
                     <div className="flex flex-col p-2.5 w-1/2 items-center"> 
-                        <motion.h1 className="mb-5" variants={item}>Alexander Pham</motion.h1>
+                        <motion.h1 className="mb-5" variants={item}>Hoi </motion.h1>
                         <motion.p className="mb-5 pt-5 pb-5" variants={item}>
                             Hello! I am Alex Pham and I'm currently studying computer science during my first year of masters at West Chester University.  
                             During this time, I've been heavily involved in various activities on campus. 
@@ -46,7 +46,7 @@ export default function Home() {
                         </motion.div>
                     </div>
 
-                    <motion.img className="size-1/4 rounded-xl" src="public/face.jpg" variants={item}></motion.img>
+                    <motion.img className="size-1/4 rounded-xl" src="Face.jpg" variants={item}></motion.img>
                 </div>
 
                 

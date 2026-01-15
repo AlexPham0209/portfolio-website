@@ -1,9 +1,9 @@
 import { PageTransition } from "./PageTransition";
 
-export default function Skills() {
+export default function Contact() {
     return (
         <PageTransition>
-            <h2 className="text-center">Skills</h2>
+            <h2 className="text-center">Contact</h2>
 
         </PageTransition>
     );

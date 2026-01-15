@@ -3,9 +3,9 @@ import NavBar from './components/NavBar'
 import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 // import About from './pages/About'
-import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import { AnimatePresence } from 'motion/react'
+import Contact from './pages/Contact'
 
 function Pages() {
   const location = useLocation();
@@ -15,8 +15,8 @@ function Pages() {
           <Route path='*' element={<Navigate to="/home"/>}/>
           <Route path='/home' element={<Home/>}/>
           {/* <Route path='/about' element={<About/>}/> */}
-          <Route path='/skills' element={<Skills/>}/>
           <Route path='/projects' element={<Projects/>}/>
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </AnimatePresence>
   );
@@ -27,8 +27,8 @@ function App() {
       <NavBar>
         <NavButton link='/home'>Home</NavButton>
         {/* <NavButton link='/about'>About</NavButton> */}
-        <NavButton link='/skills'>Skills</NavButton>
         <NavButton link='/projects'>Projects</NavButton>
+        <NavButton link='/contact'>Contact</NavButton>
       </NavBar>
       
       <Pages/>
