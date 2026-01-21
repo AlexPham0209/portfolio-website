@@ -39,7 +39,7 @@ export default function Projects() {
 
   return (
     <PageTransition>
-      <motion.div className="flex flex-row flex-wrap h-full w-2/3 justify-around">
+      <motion.div className="flex flex-row flex-wrap h-full w-2/3 justify-between gap-y-10">
         {projects.map((project) => {
           return (
             <ProjectCard
