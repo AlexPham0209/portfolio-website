@@ -14,7 +14,7 @@ export function ProjectCard({
   project: Project;
   setSelected: React.Dispatch<React.SetStateAction<number | null>>;
 }) {
-  const { id, name, _, picture } = project;
+  const { id, name, picture } = project;
 
   return (
     <motion.div
