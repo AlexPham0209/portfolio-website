@@ -10,15 +10,36 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      name: "ASCII Obj Rasterizer",
+      name: "FanBoy",
+      description: "A Gameboy emulator I made in C++",
+      picture: "Face.jpg",
+    },
+
+    {
+      id: 2,
+      name: "Ascii Rasterizer",
       description: "Able to import any objects in Rust",
+      picture: "Face.jpg",
+    },
+
+    {
+      id: 3,
+      name: "Pho",
+      description: "A programming language I programmed in Rust. It has a bytecode interpreter.",
+      picture: "Face.jpg",
+    },
+
+    {
+      id: 4,
+      name: "Neural Network",
+      description: "A custom Convolutional and Feedforward Neural Network library I created using Python and Numpy",
       picture: "Face.jpg",
     },
   ];
 
   return (
     <PageTransition>
-      <motion.div className="flex flex-row flex-wrap h-full w-2/3">
+      <motion.div className="flex flex-row flex-wrap h-full w-2/3 justify-around">
         {projects.map((project) => {
           return (
             <ProjectCard

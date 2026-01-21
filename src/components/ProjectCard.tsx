@@ -18,7 +18,7 @@ export function ProjectCard({
 
   return (
     <motion.div
-      className="flex flex-col bg-purple-100 items-center rounded-md shadow-md p-6"
+      className="flex flex-col bg-purple-100 items-center rounded-md shadow-md p-6 w-60 h-70"
       whileHover={{ scale: 1.1 }}
       onClick={() => {
         setSelected(id);
