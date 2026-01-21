@@ -21,7 +21,7 @@ export default defineConfig([
     },
 
     rules: {
-      "no-unused-vars": [2, { varsIgnorePattern: "^_$" }],
+      "no-unused-vars": "warn",
     },
   },
 ]);

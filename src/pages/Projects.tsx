@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { PageTransition } from "./PageTransition";
 import { ProjectCard, type Project } from "../components/ProjectCard";
-import { useState, type Dispatch } from "react";
+import { useState } from "react";
 import ProjectPage from "../components/ProjectPage";
 
 export default function Projects() {
