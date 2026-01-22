@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 
 export interface Project {
   id: number;
-  name: string | undefined;
-  description: string | undefined;
-  picture: string | undefined;
+  name?: string;
+  description?: string;
+  picture?: string;
 }
 
 export function ProjectCard({
@@ -26,7 +26,7 @@ export function ProjectCard({
       layoutId={`project-card-${id}`}
     >
       <h2 className="text-2xl font-bold mb-5">{name}</h2>
-      <img className="max-w-40" src={picture}></img>
+      <img className="max-w-40 rounded-2xl" src={picture}></img>
     </motion.div>
   );
 }

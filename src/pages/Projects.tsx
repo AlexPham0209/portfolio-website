@@ -17,22 +17,25 @@ export default function Projects() {
 
     {
       id: 2,
-      name: "Ascii Rasterizer",
-      description: "Able to import any objects in Rust",
-      picture: "Face.jpg",
+      name: "Terminal Renderer",
+      description:
+        "A terminal application that allows you to import .obj models and display it as ascii characters",
+      picture: "cow.gif",
     },
 
     {
       id: 3,
       name: "Pho",
-      description: "A programming language I programmed in Rust. It has a bytecode interpreter.",
+      description:
+        "A programming language I programmed in Rust. It has a bytecode interpreter.",
       picture: "Face.jpg",
     },
 
     {
       id: 4,
       name: "Neural Network",
-      description: "A custom Convolutional and Feedforward Neural Network library I created using Python and Numpy",
+      description:
+        "A custom Convolutional and Feedforward Neural Network library I created using Python and Numpy",
       picture: "Face.jpg",
     },
   ];

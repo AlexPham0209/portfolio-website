@@ -1,9 +1,12 @@
+import { motion, stagger } from "motion/react";
 import { PageTransition } from "./PageTransition";
 
 export default function Contact() {
   return (
     <PageTransition>
-      <h2 className="text-center">Contact</h2>
+      <motion.div className="flex flex-col h-full w-1/2 items-center justify-baseline">
+        <></>
+      </motion.div>
     </PageTransition>
   );
 }

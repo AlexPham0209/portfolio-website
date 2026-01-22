@@ -12,8 +12,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import { AnimatePresence } from "motion/react";
 import Contact from "./pages/Contact";
-import Competitions from "./pages/Competitions";
-import Jobs from "./pages/Jobs";
+import Experience from "./pages/Experience";
 
 function Pages() {
   const location = useLocation();
@@ -22,11 +21,9 @@ function Pages() {
       <Routes location={location} key={location.pathname}>
         <Route path="*" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-        {/* <Route path='/about' element={<About/>}/> */}
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/competitions" element={<Competitions />} />
-        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/experience" element={<Experience />} />
       </Routes>
     </AnimatePresence>
   );
@@ -34,13 +31,14 @@ function Pages() {
 function App() {
   return (
     <HashRouter>
-      <NavBar>
-        <NavButton link="/home">Home</NavButton>
-        <NavButton link="/jobs">Jobs</NavButton>
-        <NavButton link="/competitions">Competitions</NavButton>
-        <NavButton link="/projects">Projects</NavButton>
-        <NavButton link="/contact">Contact</NavButton>
-      </NavBar>
+      <header>
+        <NavBar>
+          <NavButton link="/home">Home</NavButton>
+          <NavButton link="/projects">Projects</NavButton>
+          <NavButton link="/experience">Experience</NavButton>
+          <NavButton link="/contact">Contact</NavButton>
+        </NavBar>
+      </header>
 
       <Pages />
     </HashRouter>
