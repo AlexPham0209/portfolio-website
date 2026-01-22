@@ -1,15 +1,15 @@
 import { motion, stagger } from "motion/react";
 import { PageTransition } from "./PageTransition";
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delayChildren: stagger(0.2),
-    },
-  },
-};
+// const container = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
+//     transition: {
+//       delayChildren: stagger(0.2),
+//     },
+//   },
+// };
 
 const item = {
   hidden: { opacity: 0 },
