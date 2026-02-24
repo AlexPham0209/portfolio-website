@@ -22,7 +22,6 @@ function Pages() {
         <Route path="*" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/experience" element={<Experience />} />
       </Routes>
     </AnimatePresence>
@@ -36,7 +35,6 @@ function App() {
           <NavButton link="/home">Home</NavButton>
           <NavButton link="/projects">Projects</NavButton>
           <NavButton link="/experience">Experience</NavButton>
-          <NavButton link="/contact">Contact</NavButton>
         </NavBar>
       </header>
 
