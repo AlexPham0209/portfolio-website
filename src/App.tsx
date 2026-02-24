@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 // import About from './pages/About'
 import Projects from "./pages/Projects";
 import { AnimatePresence } from "motion/react";
-import Contact from "./pages/Contact";
+
 import Experience from "./pages/Experience";
 
 function Pages() {
