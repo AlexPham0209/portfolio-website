@@ -2,14 +2,15 @@ import { motion } from "motion/react";
 import type { Project } from "./ProjectCard";
 
 export default function ProjectPage({
+  id,
   project,
   setSelected,
 }: {
+  id: number;
   project: Project;
   setSelected: React.Dispatch<React.SetStateAction<number | null>>;
 }) {
-  const { id, name, description, picture } = project;
-
+  const { year, keywords, name, description, picture, link } = project;
   return (
     <>
       <motion.div
@@ -21,14 +22,25 @@ export default function ProjectPage({
       />
       <motion.div
         className={
-          "bg-purple-200 fixed top-1/2 left-1/2 w-2/3 h-4/5 rounded-2xl z- min-h-1/2 min-w-1/2 -translate-x-1/2 -translate-y-1/2 z-12"
+          "bg-purple-200 fixed top-1/2 left-1/2 w-3/4 h-5/6 rounded-2xl z- min-h-1/2 min-w-1/2 -translate-x-1/2 -translate-y-1/2 z-12"
         }
         layoutId={`project-card-${id}`}
       >
-        <div className="flex flex-row items-center p-20 h-full justify-center">
-          <div className="flex flex-col w-2/3 h-full items-baseline">
-            <div className="mb-5 text-[48px] font-semibold">{name}</div>
-            <p className="mb-5">{description}</p>
+        <div className="flex flex-row items-center p-10 h-full justify-center">
+          <div className="flex flex-col w-2/3 h-full items-baseline p-5">
+            <h2 className="text-[32pt] font-bold">{name}</h2>
+            <h3 className="text-[16pt] font-medium mb-5">
+              {year} {keywords.map((keyword) => `• ${keyword}`).join(" ")}
+            </h3>
+            <p className="mb-10 whitespace-pre-line">{description}</p>
+            {link && (
+              <a
+                href={link}
+                className="bg-black p-5 rounded-2xl text-white hover:bg-gray-900"
+              >
+                View Project
+              </a>
+            )}
           </div>
 
           <img className="w-1/3 rounded-2xl" src={picture}></img>
