@@ -20,37 +20,30 @@ const item = {
 export default function Home() {
   return (
     <PageTransition>
-      <div className="flex flex-col h-full w-1/2 items-center justify-baseline">
+      <div className="home">
         <motion.div variants={container} initial="hidden" animate="show">
-          <div className="flex flex-row items-center p-5 justify-between">
-            <div className="flex flex-col w-2/3 items-baseline">
-              <motion.h2 className="mb-5 text-base text-[32pt]" variants={item}>
+          <div className="intro">
+            <div className="intro-body">
+              <motion.h2 variants={item}>
                 Hello! I'm Alex
               </motion.h2>
-              <motion.p className="mb-5" variants={item}>
+              <motion.p variants={item}>
                 Hello! I am a software and machine learning engineer currently
                 studying at West Chester University!
               </motion.p>
-
-              {/* <motion.div variants={item}>
-                            <Link className="m-0 rounded-2xl bg-purple-600 text-white p-3" to="/projects">
-                                Projects
-                            </Link>
-                        </motion.div> */}
             </div>
 
             <motion.img
-              className="size-1/4 rounded-xl"
               src="Alex-1.jpg"
               variants={item}
-            ></motion.img>
+            />
           </div>
 
-          <div className="flex flex-col p-5 w-full items-baseline">
-            <motion.h2 className="mb-5 text-[32pt]" variants={item}>
+          <div className="about">
+            <motion.h2 variants={item}>
               About Me
             </motion.h2>
-            <motion.p className="mb-5 pt-5 pb-5" variants={item}>
+            <motion.p variants={item}>
               I am Alex Pham and I'm currently studying computer science for my
               masters at West Chester University. During this time, I've been
               heavily involved in various activities on campus. I was the

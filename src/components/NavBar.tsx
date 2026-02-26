@@ -1,21 +1,46 @@
+import { useEffect, useState } from "react"
+
 export default function NavBar({ children }: { children?: React.ReactNode }) {
+  const [isMobile, setIsMobile] = useState(false);
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+        setIsMobile(true);
+    } else {
+        setIsMobile(false);
+    }
+  }
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  }, []);
+
   return (
-    <nav className="flex flex-row justify-evenly bg-white rounded-bl-2xl drop-shadow-md p-3.5 w-screen fixed top-0 z-10">
-      <div className=" w-1/4  p-1.5 font-bold flex-row justify-center items-baseline flex-nowrap">
-        <span className="text-center align-middle mr-5"> Alex Pham </span>
+    <nav className="navbar">
+      <ul className="navbar-left">
+        <li>Alex Pham</li>
         
-        <a className="inline-block align-middle mr-5" href="Alexander-Pham-Resume.pdf">
-          <img className="w-6 h-6" src="resume.png"></img>
-        </a>
+        <li>
+          <a href="Alexander-Pham-Resume.pdf">
+            <img src="resume.png"></img>
+          </a>
+        </li>
 
-        <a className="inline-block align-middle mr-5" href="https://github.com/AlexPham0209">
-          <img className="w-6 h-6" src="github.png"></img>
-        </a>
-      </div>
+        <li>      
+          <a href="https://github.com/AlexPham0209">
+            <img src="github.png"></img>
+          </a>
+        </li>
 
-      <ul className="flex flex-row w-1/4 justify-evenly">
+      </ul>
+
+      <ul className="navbar-right">
         {children != null && children}
       </ul>
+
+      <button className="navbar-menu">
+        <img src="hamburger.png"/>
+      </button>
     </nav>
   );
 }

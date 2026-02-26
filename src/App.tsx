@@ -7,11 +7,10 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home.tsx";
 // import About from './pages/About'
 import Projects from "./pages/Projects";
 import { AnimatePresence } from "motion/react";
-
 import Experience from "./pages/Experience";
 
 function Pages() {
@@ -27,6 +26,7 @@ function Pages() {
     </AnimatePresence>
   );
 }
+
 function App() {
   return (
     <HashRouter>
