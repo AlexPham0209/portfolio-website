@@ -303,6 +303,10 @@ h1 {
     min-height: 100%;
   }
 
+  .project-page-description {
+    align-items: baseline;
+  }
+
   .project-page-img {
     width: 20rem;
     height: 20rem;
