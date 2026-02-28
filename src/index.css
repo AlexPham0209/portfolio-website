@@ -223,8 +223,6 @@ h1 {
   width: 75%;
   height: 75%;
 
-  max-width: 50rem;
-  max-height: 50rem;
   border-radius: 0.35rem;
   padding: 5rem;
 
@@ -281,5 +279,33 @@ h1 {
       height: 15rem;
       object-fit: contain;
     }
+  }
+
+  .project-page {
+    position: fixed;
+
+    width: 75%;
+    height: 80%;
+
+    border-radius: 0.35rem;
+    padding: 5rem;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .project-page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 3rem;
+    min-height: 100%;
+  }
+
+  .project-page-img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1rem;
   }
 }
