@@ -35,10 +35,13 @@ h1 {
   line-height: 1.1;
 }
 
-.navbar {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.navbar {
   padding: 0.5rem 1.5rem 0rem 1.5rem;
   z-index: 10;
   background-color: white;
@@ -61,12 +64,38 @@ h1 {
 }
 
 .navbar-left, .navbar-right {
-  display: flex;
   margin: 0;
   padding: 0;
   align-items: center;
   gap: 1rem;
 }
+
+.navbar-left {
+  display: flex;
+}
+
+.navbar-right {
+  display: none;
+}
+
+.hamburger-menu-button {
+  display: flex;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  
+  a, li {
+    vertical-align: center;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+  }
+}
+
 
 .navbutton, .navbutton-selected {
   position: relative;
@@ -127,16 +156,17 @@ h1 {
 }
 
 
-/* Small */
-@media (min-width: 0px) and (max-width: 768px) {
+/* Medium */
+@media (min-width: 768px) {
   .navbar-right {
+    display: flex;
+  }
+
+  .hamburger-menu-button {
     display: none;
   }
-}
 
-/* Medium */
-@media (min-width: 769px) {
-  .navbar-menu {
+  .hamburger-menu {
     display: none;
   }
 
