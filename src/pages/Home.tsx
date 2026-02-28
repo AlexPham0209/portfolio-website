@@ -24,25 +24,18 @@ export default function Home() {
         <motion.div variants={container} initial="hidden" animate="show">
           <div className="intro">
             <div className="intro-body">
-              <motion.h2 variants={item}>
-                Hello! I'm Alex
-              </motion.h2>
+              <motion.h2 variants={item}>Hello! I'm Alex</motion.h2>
               <motion.p variants={item}>
                 Hello! I am a software and machine learning engineer currently
                 studying at West Chester University!
               </motion.p>
             </div>
 
-            <motion.img
-              src="Alex-1.jpg"
-              variants={item}
-            />
+            <motion.img src="Alex-1.jpg" variants={item} />
           </div>
 
           <div className="about">
-            <motion.h2 variants={item}>
-              About Me
-            </motion.h2>
+            <motion.h2 variants={item}>About Me</motion.h2>
             <motion.p variants={item}>
               I am Alex Pham and I'm currently studying computer science for my
               masters at West Chester University. During this time, I've been

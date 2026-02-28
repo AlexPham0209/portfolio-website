@@ -4,133 +4,127 @@ import { ProjectCard, type Project } from "../components/ProjectCard";
 import { useState } from "react";
 import ProjectPage from "../components/ProjectPage";
 
-export default function Projects() {
-  const [selected, setSelected] = useState<number | null>(null);
-
-  const projects: Project[] = [
-    {
-      name: "FanBoy",
-      year: 2025,
-      keywords: ["C++", "SDL2", "Embedded", "Emulators"],
-      description: `A custom Gameboy emulator written in C++ and SDL2.
+const projects: Project[] = [
+  {
+    name: "FanBoy",
+    year: 2025,
+    keywords: ["C++", "SDL2", "Embedded", "Emulators"],
+    description: `A custom Gameboy emulator written in C++ and SDL2.
 
       Can dynamically change the in-game palette colors during runtime through an intuitive and easy to use GUI.  
       
       Supports a plethora of games such as Tetris, Pokemon Red/Blue, and Super Mario Land. 
       `,
-      thumbnail: "tetris.png",
-      picture: "mario.gif",
-      link: "https://github.com/AlexPham0209/FanBoy",
-    },
+    thumbnail: "tetris.png",
+    picture: "mario.gif",
+    link: "https://github.com/AlexPham0209/FanBoy",
+  },
 
-    {
-      name: "ASCII Rasterizer",
-      year: 2026,
-      keywords: ["Rust", "Graphics Programming", "Linear Algebra"],
-      description: `A CPU-based 3D rasterizer that runs in the terminal.
+  {
+    name: "ASCII Rasterizer",
+    year: 2026,
+    keywords: ["Rust", "Graphics Programming", "Linear Algebra"],
+    description: `A CPU-based 3D rasterizer that runs in the terminal.
 
         Heavily inspired by donut.c. 
 
         Able to load .obj files using a custom loader.
         `,
-      thumbnail: "cow.gif",
-      picture: "teapot.gif",
-      link: "https://github.com/AlexPham0209/terminal-renderer",
-    },
+    thumbnail: "cow.gif",
+    picture: "teapot.gif",
+    link: "https://github.com/AlexPham0209/terminal-renderer",
+  },
 
-    // {
-    //   name: "Pho",
-    //   year: 2024,
-    //   keywords: ["Rust", "Programming Languages", "Compiler Design"],
-    //   description: `A tree-walk interpreter and compiler for a simple self-created dynamically-typed programming language called Pho.
+  // {
+  //   name: "Pho",
+  //   year: 2024,
+  //   keywords: ["Rust", "Programming Languages", "Compiler Design"],
+  //   description: `A tree-walk interpreter and compiler for a simple self-created dynamically-typed programming language called Pho.
 
-    //     Custom language supports functions, variables, if-else statements, for loops, and while loops.
+  //     Custom language supports functions, variables, if-else statements, for loops, and while loops.
 
-    //     Learned about compiler techniques and algorithms such as recursive descent and tokenization.
-    //     `,
-    //   picture: "Face.jpg",
-    //   link: "https://github.com/AlexPham0209/pho-rs",
-    // },
+  //     Learned about compiler techniques and algorithms such as recursive descent and tokenization.
+  //     `,
+  //   picture: "Face.jpg",
+  //   link: "https://github.com/AlexPham0209/pho-rs",
+  // },
 
-    {
-      name: "Ph",
-      year: 2024,
-      keywords: ["Python", "Machine Learning", "Numpy", "Neural Networks"],
-      description: `
+  {
+    name: "Ph",
+    year: 2024,
+    keywords: ["Python", "Machine Learning", "Numpy", "Neural Networks"],
+    description: `
         A deep learning library written from scratch using only Python and CuPy (a GPU-accelerated version of NumPy). The purpose of the project is to learn about major concepts behind convolutional neural networks: convolutions, pooling, feed forward and networks.
         `,
-      thumbnail: "mnist.png",
-      picture: "ph.png",
-      link: "https://github.com/AlexPham0209/NeuralNetwork",
-    },
+    thumbnail: "mnist.png",
+    picture: "ph.png",
+    link: "https://github.com/AlexPham0209/NeuralNetwork",
+  },
 
-    {
-      name: "Dish Out",
-      year: 2024,
-      keywords: ["Godot", "Game Development"],
-      description: `Programmed a game within a 4 day time period adhering to the theme, “Built to Scale.”
+  {
+    name: "Dish Out",
+    year: 2024,
+    keywords: ["Godot", "Game Development"],
+    description: `Programmed a game within a 4 day time period adhering to the theme, “Built to Scale.”
 
         Created a dynamic enemy spawning and coloring system using GDScript and Godot’s shader language.  
 
         Used Godot’s built-in tweening system to add procedural animations to the characters and enemies in order to add visual interest and flair.
         `,
-      thumbnail: "dish_out.gif",
-      picture: "dish_out.gif",
-      link: "https://alexpham0209.itch.io/dish-out",
-    },
+    thumbnail: "dish_out.gif",
+    picture: "dish_out.gif",
+    link: "https://alexpham0209.itch.io/dish-out",
+  },
 
-    {
-      name: "Exercise Recognition",
-      year: 2025,
-      keywords: [
-        "Python",
-        "Machine Learning",
-        "Tensorflow",
-        "Numpy",
-        "Arduino",
-      ],
-      description: `A machine learning project that classifies the current exercise you are doing and displays it on a website. It utilizes a 1D Convolutional Neural Network to process a 2 second window of accelerometer and gyroscopic data. Then, it classifies the window as either a bicep curl, an overhead press, or a lateral raise.
+  {
+    name: "Exercise Recognition",
+    year: 2025,
+    keywords: ["Python", "Machine Learning", "Tensorflow", "Numpy", "Arduino"],
+    description: `A machine learning project that classifies the current exercise you are doing and displays it on a website. It utilizes a 1D Convolutional Neural Network to process a 2 second window of accelerometer and gyroscopic data. Then, it classifies the window as either a bicep curl, an overhead press, or a lateral raise.
 
         This project requires a microcontroller with a LSM9DS1 IMU unit.
         `,
-      thumbnail: "exercise.png",
-      picture: "exercise.png",
-      link: "https://github.com/AlexPham0209/exercise-recognition",
-    },
+    thumbnail: "exercise.png",
+    picture: "exercise.png",
+    link: "https://github.com/AlexPham0209/exercise-recognition",
+  },
 
-    {
-      name: "Whiteboard",
-      year: 2026,
-      keywords: ["Typescript", "React", "Express.js", "PostgreSQL"],
-      description: `Whiteboard is a website where users can draw anything on a virtual whiteboard!
+  {
+    name: "Whiteboard",
+    year: 2026,
+    keywords: ["Typescript", "React", "Express.js", "PostgreSQL"],
+    description: `Whiteboard is a website where users can draw anything on a virtual whiteboard!
 
         Join and create private rooms!
         Draw with three colors: black, red, and blue.
         Draw to your heart's desire!
       `,
-      thumbnail: "draw.gif",
-      picture: "draw.gif",
-      link: "https://github.com/AlexPham0209/whiteboard",
-    },
+    thumbnail: "draw.gif",
+    picture: "draw.gif",
+    link: "https://github.com/AlexPham0209/whiteboard",
+  },
 
-    {
-      name: "Atorus Code Review Tool",
-      year: 2025,
-      keywords: ["Javascript", "Programming Languages", "Language Server"],
-      description: `Collaborated with Atorus Research to develop a VS-Code extension that highlights compliance violations in R code.  
+  {
+    name: "Atorus Code Review Tool",
+    year: 2025,
+    keywords: ["Javascript", "Programming Languages", "Language Server"],
+    description: `Collaborated with Atorus Research to develop a VS-Code extension that highlights compliance violations in R code.  
 
       Created a custom language server using VS-Code Language Server and Extension API to send error/warning messages to the editor in real time.  
       
       Used custom parser and lexer generated by ANTLR-4 to decipher R programming language code.  
       `,
-      thumbnail: "atorus_logo.jpg",
-      picture: "code_review_tool.gif",
-    },
-  ].sort((a, b) => (a.year < b.year ? -1 : 1));
+    thumbnail: "atorus_logo.jpg",
+    picture: "code_review_tool.gif",
+  },
+].sort((a, b) => (a.year < b.year ? -1 : 1));
+
+export default function Projects() {
+  const [selected, setSelected] = useState<number | null>(null);
 
   return (
     <PageTransition>
-      <motion.div className="flex flex-row flex-wrap h-full w-2/3 justify-around gap-y-10">
+      <motion.div className="projects">
         {projects.map((project, index) => {
           return (
             <ProjectCard

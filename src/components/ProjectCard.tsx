@@ -23,15 +23,15 @@ export function ProjectCard({
   const { name, thumbnail } = project;
   return (
     <motion.div
-      className="flex flex-col bg-purple-100 items-center rounded-md shadow-md p-6 w-60 h-70"
+      className="project-card"
       whileHover={{ scale: 1.1 }}
       onClick={() => {
         setSelected(id);
       }}
       layoutId={`project-card-${id}`}
     >
-      <h2 className="text-2xl font-bold mb-5">{name}</h2>
-      <img className="max-w-40 rounded-2xl" src={thumbnail}></img>
+      <h2>{name}</h2>
+      <img src={thumbnail}></img>
     </motion.div>
   );
 }

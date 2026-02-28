@@ -20,17 +20,18 @@ export default function Experience() {
   return (
     <PageTransition>
       <motion.div className="flex flex-col h-full w-2/3 items-center justify-between">
-      <motion.div className="flex flex-row w-full justify-between items-center p-20 border-b-1 border-purple-400">
+        <motion.div className="flex flex-row w-full justify-between items-center p-20 border-b-1 border-purple-400">
           <motion.div className="flex flex-col w-2/3" variants={item}>
             <h2 className="text-[32pt]">Game Development Councelor</h2>
             <h3 className="text-[16pt] mb-10">June 2023</h3>
             <p className="whitespace-pre-wrap">
-              Taught over 30 high school students the fundamentals of Construct 3, a beginner-friendly visual scripting-based
-              game engine.
+              Taught over 30 high school students the fundamentals of Construct
+              3, a beginner-friendly visual scripting-based game engine.
               <br />
               <br />
-              Coordinated with a team of counselors specialized in different fields, such as Film and Audio, to create the best
-              learning experience for the campers
+              Coordinated with a team of counselors specialized in different
+              fields, such as Film and Audio, to create the best learning
+              experience for the campers
             </p>
           </motion.div>
 

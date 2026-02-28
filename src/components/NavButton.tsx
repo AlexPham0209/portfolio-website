@@ -11,14 +11,13 @@ export default function NavButton({
   const location = useLocation();
   return (
     <li
-      className={location.pathname === link ? "navbutton-selected" : "navbutton"}
+      className={
+        location.pathname === link ? "navbutton-selected" : "navbutton"
+      }
     >
       <Link to={link}>{children != null && children}</Link>
       {location.pathname === link && (
-        <motion.div
-          layoutId="underline"
-          id="underline"
-        />
+        <motion.div layoutId="underline" id="underline" />
       )}
     </li>
   );
