@@ -85,11 +85,13 @@ h1 {
 }
 
 .hamburger-menu {
+  float: right;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
+  min-height: 100%;
   background-color: white;
-
+  
   a,
   li:first-child {
     margin-top: 1rem;
@@ -288,10 +290,7 @@ h1 {
     height: 80%;
 
     border-radius: 0.35rem;
-    padding: 5rem;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
+    padding: 2.5rem;
   }
 
   .project-page-content {

@@ -30,7 +30,7 @@ export default function Home() {
                 studying at West Chester University!
               </motion.p>
             </div>
-
+            
             <motion.img src="Alex-1.jpg" variants={item} />
           </div>
 
