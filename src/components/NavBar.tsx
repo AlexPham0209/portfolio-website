@@ -29,7 +29,7 @@ export default function NavBar({ children }: { children?: React.ReactNode }) {
           className="hamburger-menu-button"
           onClick={() => setHamburgerOpen(!hamburgerOpen)}
         >
-          <img src="hamburger.png" />
+          <img src="burger-menu.svg" />
         </button>
       </nav>
 
